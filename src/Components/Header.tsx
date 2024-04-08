@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <>
@@ -5,10 +7,10 @@ function Header() {
         <h1>Keeper App!</h1>
         <ul className="head-ul">
           <li className="head-li">
-            <a href="#contact-us">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li className="head-li">
-            <a href="#sign-up">Register</a>
+            <Link to="/reg">Register</Link>
           </li>
         </ul>
       </header>

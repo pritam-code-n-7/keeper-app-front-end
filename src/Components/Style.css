@@ -38,6 +38,20 @@ header h1 {
     float: right;
     padding: 5px;
 }
+
+/* Additional Materialize CSS classes for eye-catching styles */
+.head-li a {
+    color: #ffffff; /* Text color */
+    font-weight: bold; /* Bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    padding: 0 10px; /* Padding for better spacing */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.head-li a:hover {
+    color: #ff4081; /* Hover color */
+}
+
 .note {
     background: #fff;
     border-radius: 7px;
