@@ -1,12 +1,12 @@
 import Button from "./Button";
 import Footer from "./Footer";
 import Notes from "./Notes";
-import Desc from "./Desc";
+import data from "../data/Data.json";
 
 function Body() {
   return (
     <div>
-      {Desc.map((item) => (
+      {data.map((item) => (
         <Notes {...item} key={item.id} />
       ))}
       <Button />
