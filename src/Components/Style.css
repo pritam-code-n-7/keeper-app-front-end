@@ -11,8 +11,8 @@ html {
 body {
     background: #eee;
     padding: 0 16px;
-    min-height: 200vh;
-      
+    min-height: 100vh;
+
 }
 
 header {
@@ -41,15 +41,21 @@ header h1 {
 
 /* Additional Materialize CSS classes for eye-catching styles */
 .head-li a {
-    color: #ffffff; /* Text color */
-    font-weight: bold; /* Bold font weight */
-    text-transform: uppercase; /* Uppercase text */
-    padding: 0 10px; /* Padding for better spacing */
-    transition: color 0.3s; /* Smooth transition for color change */
+    color: #ffffff;
+    /* Text color */
+    font-weight: bold;
+    /* Bold font weight */
+    text-transform: uppercase;
+    /* Uppercase text */
+    padding: 0 10px;
+    /* Padding for better spacing */
+    transition: color 0.3s;
+    /* Smooth transition for color change */
 }
 
 .head-li a:hover {
-    color: #ff4081; /* Hover color */
+    color: #ff4081;
+    /* Hover color */
 }
 
 .note {
@@ -59,8 +65,8 @@ header h1 {
     padding: 10px;
     width: 400px;
     margin: 16px;
-    float:left;
-    cursor: pointer;   
+    float: left;
+    cursor: pointer;
 }
 
 .note h1 {
@@ -76,12 +82,54 @@ header h1 {
 }
 
 .foot {
-    position: fixed; 
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 2.5rem;
-    background-color: #333; 
-    color: #ccc; 
+    background-color: #333;
+    color: #ccc;
     text-align: center;
-  }
+}
+
+/* register.css */
+
+/* Container styling */
+.register-container {
+    max-width: 400px;
+    margin-top: 10px;
+    margin-left: 400px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input field styling */
+.input-field {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.submit-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
