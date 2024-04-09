@@ -1,11 +1,43 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-
-const ContactUs = () => {
+function ContactUs() {
+  interface MyInterface {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
+  }
+  const [value, setValue] = useState<MyInterface | null>(null);
+  useEffect(() => {
+    const fetchApi = async () => {
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/todos/1"
+        );
+        setValue(response.data);
+      } catch (err) {
+        console.error(
+          "error occured at the time of getting data from api",
+          err
+        );
+      }
+    };
+    fetchApi();
+  }, []);
   return (
     <div>
-     <p>Officia voluptate proident esse adipisicing commodo deserunt. Cupidatat enim dolore consectetur nulla quis ea in ut officia proident laboris quis nostrud anim. Deserunt exercitation Lorem laboris tempor irure ex voluptate excepteur eu.</p>
+      {value ? (
+        <div>
+          <p>UserId:{value.userId}</p>
+          <p>Title:{value.title}</p>
+          <p>Completed:{value.completed ? "yes" : "no"}</p>
+        </div>
+      ) : (
+        <div>data loading...</div>
+      )}
     </div>
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;
